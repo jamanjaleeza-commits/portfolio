@@ -1,0 +1,236 @@
+@font-face {
+  font-family: pixelfont;
+  src: url(../fonts/retropix.otf/retropix.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: linear-gradient(#b3c7c3, #d8d5ca);
+  background-repeat: no-repeat;
+  background-color: #ece1d5;
+  overflow-x: hidden;
+}
+
+.topbar {
+  color: #32305a;
+  font-size: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: pixelfont;
+  font-weight: bold;
+}
+
+.contacts {
+  background-color:#6c8b8d;
+  color: #ece1d5;
+  border: 2px solid #6c8b8d;
+  border-radius: 50px;
+  padding: 6px 30px;
+  margin-top: 10px;
+  margin-right: 5px;
+  font-family: pixelfont;
+  font-size: 20px;
+  float: right;
+  user-select: none;
+}
+
+.projects {
+  background-color:#6c8b8d;
+  color: #ece1d5;
+  border: 2px solid #6c8b8d;
+  border-radius: 50px;
+  padding: 6px 30px;
+  margin-top: 10px;
+  margin-right: 5px;
+  font-family: pixelfont;
+  font-size: 20px;
+  float: right;
+  user-select: none;
+}
+
+.Home {
+  background-color:#6c8b8d;
+  color: #ece1d5;
+  border: 2px solid #6c8b8d;
+  border-radius: 50px;
+  padding: 6px 20px;
+  margin-top: 10px;
+  margin-right: 5px;
+  font-family: pixelfont;
+  font-size: 20px;
+  float: right;
+  user-select: none;
+}
+
+.contacts:hover {
+  background-color: #5a7a7c;
+}
+
+.projects:hover {
+  background-color: #5a7a7c;
+}
+
+.Home:hover {
+  background-color: #5a7a7c;
+}
+
+#top-image {
+  width: 35px;
+  height: auto;
+  float: left;
+  margin-right: 10px;
+  margin-top: -5px;
+}
+
+.projects-container {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 100px auto;
+  padding: 20px;
+  color: #32305a;
+}
+
+.projects-container h1 {
+  font-size: 50px;
+  font-family: pixelfont;
+  color: #651610;
+  text-align: center;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-item {
+  display: flex;
+  height: 350px;
+  background-color: #f0eae59c;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.project-image {
+  flex: 1;
+  margin-right: 30px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-info {
+  flex: 2;
+}
+
+.project-info h2 {
+  font-size: 32px;
+  font-family: pixelfont;
+  color: #32305a;
+  margin-bottom: 15px;
+}
+
+.project-info p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #5a5a5a;
+  margin-bottom: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.project-tech {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.project-tech span {
+  background-color: #6c8b8d;
+  color: #ece1d5;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#openVideoBtn {
+  display: inline-block;
+  background-color: #651610;
+  color: #ece1d5;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#openVideoBtn:hover {
+  background-color: #4a0f0a;
+}
+
+.project-arrow:focus {
+  outline: 2px solid #ece1d5;
+}
+
+/* Modal background */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #b3c7c38d; /* Semi-transparent backdrop */
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: #5a7a7c;
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  width: 600px;
+  height: 550px;
+  color: #d8d5ca;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-content video {
+  display: block;
+  max-width: 5500px; 
+  height: auto;
+}
+
+/* Close button */
+.close {
+  color: #d8d5ca;
+  float: right;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: -10px;
+  margin-right: -550px;
+  display: flex;
+}
+
+.close:hover {
+  color: #32305a;
+}
+
