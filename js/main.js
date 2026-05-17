@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (projectsBtn) {
     projectsBtn.addEventListener("click", () => {
-      window.location.href = "projects.html";
+      window.location.href = "work.html";
     });
   }
 
